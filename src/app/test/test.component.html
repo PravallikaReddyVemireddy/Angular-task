@@ -1,0 +1,46 @@
+<p>test works hi!</p>
+
+<h2 *ngIf="display; else elseBlock">
+
+    Coding is working !
+
+</h2>
+
+<ng-template #elseBlock>
+
+<h2>
+
+    Else block shown Name hidden
+
+</h2>
+
+</ng-template>
+<div *ngIf="isdisplay; then thenBlock; else elseBlock"></div>
+
+<ng-template #thenBlock>
+
+    <h2>pravalli!</h2>
+
+</ng-template>
+<div *ngFor="let vehicle of vehicles">
+<h2>{{vehicle}}</h2>
+</div>
+<h2>{{"hello " + valli}}</h2>
+<button (click)="fireEvent()">Send Event</button>
+
+<ng-template #elseBlock>
+
+<h2> Else block shown Name hidden</h2>
+
+</ng-template>
+<div [ngSwitch] = "color">
+
+    <div *ngSwitchCase="'red'"> you picked red colour</div>
+
+    <div *ngSwitchCase="'blue'"> you picked blue colour</div>
+
+    <div *ngSwitchCase="'green'"> you picked green colour</div>
+
+    <div *ngSwitchDefault>Pick again</div>
+
+</div>
